@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D3C5F4F8-E705-2A66-E8FC-A171B16796F0}</ProjectGuid>
+    <ProjectGuid>{716E5561-0338-59CF-40F0-F6AF01D42324}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,7 +53,7 @@
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets/NewBehaviourScript.cs" />
+    <Compile Include="Assets/Scripts/Randomizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
