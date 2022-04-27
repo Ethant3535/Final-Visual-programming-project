@@ -23,15 +23,13 @@ public class Randomizer : MonoBehaviour
     // if 2 of those sprites exist after, reomove that sprite from the list
     //continue till all slots are filled
     //reset list for next shuffle
+    public List<Sprite> dogList = new List<Sprite>(new Sprite[16]);
 
-    
 
-    public void 
+
+    public void randomizeSprite()
     {
-        var list = new List<string> { "one", "two", "three", "four", "five", "six", "seven", "eight" };
-        string RandomSprite = Random.Range(list.Count);
-
-      
+        
     }
 }
     
