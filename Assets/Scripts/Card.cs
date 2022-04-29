@@ -15,7 +15,11 @@ public class Card : MonoBehaviour
     {
         
     }
+
+    public SpriteRenderer seePic(GameObject button)
+    {
+        return button.SpriteRenderer;
+    }
     //What pic it is
     //Needs to know whether it is flipped
-    //What the back card is 
 }
