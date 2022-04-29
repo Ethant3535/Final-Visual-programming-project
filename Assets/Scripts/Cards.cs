@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Cards : MonoBehaviour
 {
+    public SpriteRenderer SpriteRenderer;
+    int counter = 0;
+    GameObject button1;
+    GameObject button2;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +22,7 @@ public class Cards : MonoBehaviour
 
     public bool checkIfSame(GameObject button1, GameObject button2)
     {
-        if (button1.SpriteRenderer = button2.SpriteRenderer)
+        if (button1.SpriteRenderer.sprite = button2.SpriteRenderer.sprite)
         {
             return true;
         }
@@ -30,9 +34,13 @@ public class Cards : MonoBehaviour
         if (checkIfSame(button1,button2))
         {
             score+=1
+            //do fx
             button1.setActive = false;
             button2.setActive = false;
         }
+
+        //do you didn't get a match fx
+        //flip the cards back over
     }
 
     //Keep track of which cards have been clicked on, needs to know card 1 and card 2 clicked
