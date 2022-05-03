@@ -59,6 +59,7 @@
     <Compile Include="Assets/Scripts/Card.cs" />
     <Compile Include="Assets/Scripts/Randomizer.cs" />
     <Compile Include="Assets/Scripts/Cards.cs" />
+    <Compile Include="Assets/Scripts/Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

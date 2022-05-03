@@ -6,8 +6,9 @@ public class Cards : MonoBehaviour
 {
     public SpriteRenderer SpriteRenderer;
     int counter;
-    GameObject button1;
-    GameObject button2;
+    public SpriteRenderer Button1SpriteRenderer;
+    public SpriteRenderer Button2SpriteRenderer;
+    int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,9 @@ public class Cards : MonoBehaviour
         
     }
 
-    public bool checkIfSame(GameObject button1, GameObject button2)
+    public bool checkIfSame(SpriteRenderer button1SpriteRenderer, SpriteRenderer button2SpriteRenderer)
     {
-        if (button1.SpriteRenderer.sprite = button2.SpriteRenderer.sprite)
+        if (button1SpriteRenderer.sprite = button2SpriteRenderer.sprite)
         {
             return true;
         }
@@ -31,12 +32,12 @@ public class Cards : MonoBehaviour
 
     public void ifSame()
     {
-        if (checkIfSame(button1,button2))
+        if (checkIfSame(Button1SpriteRenderer,Button2SpriteRenderer))
         {
-            score+=1
+            score += 1;
             //do fx
-            button1.setActive = false;
-            button2.setActive = false;
+            Button1SpriteRenderer.gameObject.SetActive(false);
+            Button2SpriteRenderer.gameObject.SetActive(false);
         }
 
         //do you didn't get a match fx
