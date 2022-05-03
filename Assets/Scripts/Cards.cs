@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cards : MonoBehaviour
 {
     public SpriteRenderer SpriteRenderer;
-    int counter = 0;
+    int counter;
     GameObject button1;
     GameObject button2;
     // Start is called before the first frame update
