@@ -10,6 +10,8 @@ public class Game : MonoBehaviour
     private int numberOfCardsClicked = 0;
     private Sprite firstCardSprite;
     private Sprite secondCardSprite;
+    private int score = 0;
+    public Readouts ReadOuts;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,7 @@ public class Game : MonoBehaviour
             if (firstCardSprite == secondCardSprite)
             {
                 print("match!");
+                UpdateMatches(score + 1);
             }
             else
             {
@@ -45,4 +48,12 @@ public class Game : MonoBehaviour
             numberOfCardsClicked = 0;
         }
     }
+
+    private void UpdateMatches(int newScore)
+    {
+        score = newScore;
+        ReadOuts.ShowMatches(score);
+    }
+
+
 }
