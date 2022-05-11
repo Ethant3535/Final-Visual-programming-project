@@ -56,12 +56,15 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/EasyClick.cs" />
+    <Compile Include="Assets/Scripts/PanelClose.cs" />
     <Compile Include="Assets/Scripts/Card.cs" />
+    <Compile Include="Assets/Scripts/Difficulty.cs" />
     <Compile Include="Assets/Scripts/Randomizer.cs" />
+    <Compile Include="Assets/Scripts/Countdown.cs" />
     <Compile Include="Assets/Scripts/Game.cs" />
     <Compile Include="Assets/Scripts/Readouts.cs" />
     <Compile Include="Assets/Scripts/Cards.cs" />
-    <Compile Include="Assets/Scripts/Countdown.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

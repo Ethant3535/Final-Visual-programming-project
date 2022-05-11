@@ -53,6 +53,7 @@ public class Game : MonoBehaviour
     {
         score = newScore;
         ReadOuts.ShowMatches(score);
+   
     }
 
 
