@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,43 +12,74 @@ public class Countdown : MonoBehaviour
     float currentTime;
     public Text timerText;
     // Start is called before the first frame update
+    private bool isStarted = false;
+    private bool isGameOver = false;
+    private bool TimerPastZero = false;
 
     public void EasyClick()
     {
-        initialTime = 30;
+        initialTime = 120;
+        Seconds = 0;
+        isStarted = true;
+        isGameOver = false;
+        TimerPastZero = false;
     }
 
     public void MediumClick()
     {
-        initialTime = 20;
+        initialTime = 60;
+        Seconds = 0;
+        isStarted = true;
+        isGameOver = false;
+        TimerPastZero = false;
     }
 
     public void HardClick()
     {
-        initialTime = 10;
+        initialTime = 40;
+        Seconds = 0;
+        isStarted = true;
+        isGameOver = false;
+        TimerPastZero = false;
+    }
+
+    public void Reset()
+    {
+        isGameOver = false;
+        isStarted = false;
     }
 
     void Update()
     {
-        Seconds += Time.deltaTime;
-        currentTime = initialTime - Seconds;
-        timerText.text = "Time: " + (int)currentTime + "s";
-        bool TimerPastZero = false;
-
-        if (currentTime <= 0)
+        if (isStarted && !isGameOver)
         {
-            if (TimerPastZero == false)
-                //print("GAMEOVER");
+            Seconds += Time.deltaTime;
+            currentTime = initialTime - Seconds;
+
+            if (currentTime < 0)
+                currentTime = 0;
+
+            timerText.text = "Time: " + (int)currentTime + "s";
+            bool TimerPastZero = false;
+
+            if (currentTime <= 0)
+            {
+                if (TimerPastZero == false)
+                    isGameOver = true;
+                    TimerPastZero = true;
+            }
+            else
                 TimerPastZero = true;
         }
-        else
-            TimerPastZero = true;
 
     }
 
     // Update is called once per frame
 
-
+    public bool IsGameOver()
+    {
+        return isGameOver;
+    }
 
 
 }
